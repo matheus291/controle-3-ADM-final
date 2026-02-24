@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pymysql
 
-conexao = pymysql.connector.connect(
+conexao = pymysql.connect(
     host="switchyard.proxy.rlwy.net",
     user="root",
     password="gKCmTIvbsijMMuhLYFnyTLCSdBqPHkma",
@@ -52,4 +52,5 @@ if st.button('Iniciar'):
 
 
 cursor.close()
+
 conexao.close()
