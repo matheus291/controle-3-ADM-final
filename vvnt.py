@@ -7,7 +7,10 @@ conexao = pymysql.connect(
     user="root",
     password="gKCmTIvbsijMMuhLYFnyTLCSdBqPHkma",
     database="railway",
-    port=int("43734"))
+    port=int("43734"),
+    ssl={'ssl': {}}
+    )
+
 cursor = conexao.cursor()
 
 
@@ -54,3 +57,4 @@ if st.button('Iniciar'):
 cursor.close()
 
 conexao.close()
+
